@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+:root {
+  --cor-fundo: #d8dfe8;
+  --cor-texto: #0a3871;
+  --cor-alerta: #495057;
+  --cor-fundo-output: #ffffff;
+  --tamanho-fonte-padrao: 1em;
+  --tamanho-fonte-alerta: 0.8em;
+  --largura-logo: 3.125rem;
+  --altura-input: 90%;
+  --largura-input: 95%;
+  --sombra-caixa: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: "Inter Tight", sans-serif;
+  background-color: var(--cor-fundo);
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 0.625rem;
+  left: 0.625rem;
+  width: var(--largura-logo);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  height: 95vh;
+}
+
+section {
+  padding-top: 4%;
+}
+
+.input {
+  flex: 80%;
+  display: flex;
+  padding-left: 1%;
+  flex-direction: column;
+  height: 85vh;
+}
+
+.botoes {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  justify-content: center;
+}
+
+
+
+.output {
+  flex: 20%;
+  height: 90%;
+  margin-top: 0.5%;
+  background-color: var(--cor-fundo-output);
+  border-radius: 15px;
+  margin-right: 1%;
+  box-shadow: var(--sombra-caixa);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.output p {
+  font-size: var(--tamanho-fonte-padrao);
+  color: var(--cor-texto);
+}
+
+.input #inputText {
+  font-size: 2rem;
+  width: var(--largura-input);
+  padding-bottom: 60vh;
+  padding-top: 3%;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  border: none;
+  font-family: "Inter Tight", sans-serif;
+}
+
+.input #inputText::placeholder {
+  font-size: 2rem;
+  color: var(--cor-texto);
+}
+
+#inputText:focus {
+  border: 0.5px solid var(--cor-texto);
+}
+
+.input #warning {
+  color: var(--cor-alerta);
+  font-size: var(--tamanho-fonte-alerta);
+}
+
+.output img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.botoes_botao {
+  border-radius: 10px;
+  width: 30%;
+  height: 30px;
+}
+
+#botoes_botao_criptografar {
+  color: var(--cor-fundo);
+  background-color: var(--cor-texto);
+}
+
+#botoes_botao_descriptografar {
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  border: 1px solid var(--cor-texto);
+}
+
+#botao_copiar{
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-texto);
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .output img {
+      display: none;
+    }
+  
+    main {
+      flex-direction: column;
+    }
+
+    .input {
+        flex: 20%;
+    }
+
+    .input #inputText {
+        font-size: 2rem;
+        width: var(--largura-input);
+        padding-bottom: 20vh;
+        margin-top: 10%;
+    }
+}

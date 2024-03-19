@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criptografia e Descriptografia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <img class="logo" src="logo_alura.svg" alt="Logo alura" />
+      <section class="input">
+        <input type="text" id="inputText" placeholder="Digite seu texto" />
+        <p id="warning">
+          <img src="aviso.svg" alt="Ícone de aviso" />
+          Apenas letras minúsculas e sem acento
+        </p>
+        <div class="botoes">
+          <button
+            class="botoes_botao"
+            id="botoes_botao_criptografar"
+            onclick="criptografar()"
+          >
+            Criptografar
+          </button>
+          <button
+            class="botoes_botao"
+            id="botoes_botao_descriptografar"
+            onclick="descriptografar()"
+          >
+            Descriptografar
+          </button>
+        </div>
+      </section>
+      <section class="output">
+        <img
+          src="pessoa.svg"
+          alt="Pessoa olhando para um diamante segurando uma lupa com a mão direita"
+        />
+        <p id="resultado">Nenhuma mensagem encontrada</p>
+        <button class="botoes_botao" id="botao_copiar" onclick="copiarTexto()">Copiar Texto</button>      
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
